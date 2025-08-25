@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="pageTitle">ATOMIX GAMES</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="site-name">ATOMIX GAMES</div>
+        <ul class="nav-tabs">
+            <a href="https://classroom.google.com/" target="_blank" class="panic-button">Panic</a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page.html">Games</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <h1>Search Google Freely</h1>
+
+        <form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+            <input id="uv-address" type="text" placeholder="Search Google" class="form__input" />
+        </form>
+
+        <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+        </div>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 ATOMIX & RUX. All rights reserved.</p>
+        </footer>
+
+        <script src="uv/uv.bundle.js" defer></script>
+        <script src="uv/uv.config.js" defer></script>
+        <script src="register-sw.js" defer></script>
+        <script src="search.js" defer></script>
+        <script src="index.js" defer></script>
+        <script src="error.js" defer></script>
+    </div>
+</body>
+</html>
