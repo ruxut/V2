@@ -1,6 +1,6 @@
 self.__uv$config = {
-    prefix: '/src/hb63hjksuskwyu727/',
-    bare:'https://edgedcircles.com/bare/',
+    prefix: '/src/service/',
+    bare:'https://smart-eagle-351.nowgg.me/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/src/uv/uv.handler.js',
