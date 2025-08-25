@@ -5,50 +5,85 @@
     <link rel="stylesheet" href="index.css">
     <style>
     body {
-    margin: 0;
-    padding: 0;
-    background: #0f0f0f;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden; /* prevents side scroll */
-}
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden; /* no side scroll */
+        }
 
-.games-section {
-    display: flex;
-    flex-wrap: wrap;         /* keeps boxes on screen, moves extras to next row */
-    justify-content: center; /* centers rows */
-    gap: 20px;               /* space between boxes */
-    padding: 20px;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #111;
+            position: sticky;  /* stays on top when scrolling */
+            top: 0;
+            z-index: 10;
+        }
 
-.game-box {
-    background: #1a1a1a;
-    border-radius: 10px;
-    text-align: center;
-    width: 180px;            /* fixed width */
-    padding: 10px;
-    transition: transform 0.2s;
-}
+        .navbar .site-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-.game-box:hover {
-    transform: scale(1.05);
-}
+        .nav-tabs {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
 
-.game-icon {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+        .nav-tabs li a, .panic-button {
+            text-decoration: none;
+            color: white;
+            padding: 8px 14px;
+            background: #222;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
 
-.site-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-</style>
+        .nav-tabs li a:hover, .panic-button:hover {
+            background: #444;
+        }
+
+        .games-section {
+            display: flex;
+            flex-wrap: wrap;         /* boxes wrap onto new rows */
+            justify-content: center; /* centered */
+            gap: 20px;               /* spacing between boxes */
+            padding: 20px;
+        }
+
+        .game-box {
+            background: #1a1a1a;
+            border-radius: 10px;
+            text-align: center;
+            width: 180px;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+
+        .game-box:hover {
+            transform: scale(1.05);
+        }
+
+        .game-icon {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -156,4 +191,5 @@
     </footer>
 </body>
 </html>
+
 
