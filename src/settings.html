@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">ATOMIX GAMES</title>
-    <link rel="icon" id="favicon" href="icons/default.png" type="image/png">
-    <script src="js/title.js" defer></script>
-    <script src="js/open.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" id="favicon" href="icons/atomix.png" type="image/png">
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="site-name">ATOMIX GAMES</div>
         <ul class="nav-tabs">
-            <a href="https://classroom.google.com/" target="_blank" class="panic-button">Panic</a>
+            <li><a href="https://classroom.google.com/" target="_blank" class="panic-button">Panic</a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="page.html">Games</a></li>
             <li><a href="settings.html">Settings</a></li>
@@ -20,27 +21,47 @@
         </ul>
     </nav>
 
-    <div class="title-editor">
-        <input type="text" id="titleInput" placeholder="Enter new tab title">
-        <button id="saveTitleBtn">Save (BETA)</button>
+    <!-- Settings -->
+    <div class="settings-container">
+        <div class="title-editor">
+            <input type="text" id="titleInput" placeholder="Enter new tab title">
+            <button id="saveTitleBtn">Save</button>
+        </div>
+
+        <div class="title-editor">
+            <input type="text" id="faviconInput" placeholder="Enter favicon image URL">
+            <button id="saveFaviconBtn">Save Icon</button>
+        </div>
+
+        <div class="title-editor">
+            <button id="resetBtn">Reset to Default</button>
+        </div>
+
+        <div class="title-editor">
+            <button onclick="openNewTab()">About:Blank Tab</button>
+        </div>
     </div>
 
-    <div class="title-editor">
-        <input type="text" id="faviconInput" placeholder="Enter favicon image URL">
-        <button id="saveFaviconBtn">Save Icon (BETA)</button>
+    <!-- Theme Selector -->
+    <div class="box theme">
+        <h2>Theme</h2>
+        <p>Customise the theme of certain buttons, boxes, menu items etc...</p>
+        <div class="buttons">
+            <select id="themeSelector">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
     </div>
 
-    <div class="title-editor">
-        <button id="resetBtn">Reset to Default</button>
-    </div>
+    <!-- Scripts -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/title.js" defer></script>
+    <script src="js/open.js" defer></script>
 
-    <div class="title-editor">
-        <button onclick="openNewTab()">About:Blank Tab</button>
-    </div>
-
+    <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2025 ATOMIX & RUX. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
